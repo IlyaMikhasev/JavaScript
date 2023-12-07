@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw java script</title>
+</head>
+<body>
+    <script>
+        //задача 1
+            var answer = +prompt('Введите число');
+            if(answer%2==0 && answer>0 && answer<=10)
+                alert('TRUE') ;
+            else 
+                alert('False') ;  
+        //Задача 2
+        var num_startRange = +prompt('Введите число начала диапазона');
+        var num_endRange = +prompt('Введите число конца диапазона');
+        var numbres = '';
+        for(var i = num_startRange,j=0;i<=num_endRange;i++){
+            if(Math.log2(i)%1==0)
+                numbres += i +' ';
+        }
+        alert(numbres);
+        //Задачча 3
+        var userSum=0;
+        while(confirm('Хотите ввести число?')){
+            userSum += +prompt('Введите число');
+        }
+        alert('Сумма ваших чисел равна '+userSum)
+        //Задача 4
+        var str = prompt('введите строку');
+        var str1 = str.replace(/[1\s]/g, '');
+        if(str1 != str)
+            alert(str1);
+        else
+            alert(str + ' из строки ничего не вырезано');
+        //задача 5
+        var count =0;
+        var str ='';
+        while(count<10){
+            var rand = 1 + Math.random() * (20  - 1);
+            var int = Math.floor(rand);
+            if(int%3==0)
+                continue;
+            str += int+' ';
+            ++count;
+        }
+        alert(str);
+
+    </script>
+</body>
+</html>
